@@ -24,7 +24,6 @@ If you do not want to set up a compiler or build from source, you can use the pr
 3. Run `builder.exe`, enter your Telegram Bot Token and Chat ID, and generate the final executable.
 
 ---
-
 ## Features & Commands
 
 * `/screenshot` - Capture and send screen
@@ -32,8 +31,9 @@ If you do not want to set up a compiler or build from source, you can use the pr
 * `/wifipassword` - Extract saved Wi-Fi profiles & keys
 * `/shutdown` - Remotely shutdown the target system
 * `Cmd/<command>` - Run remote terminal commands
+* `open/<path>` - Open a specified file or application on the target system
 * `fupload/<path>` / `pupload/<path>` - Upload files or images to Telegram
-
+  
 ---
 
 ## Prerequisites & Dependencies (For Manual Build)
