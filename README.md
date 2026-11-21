@@ -74,7 +74,7 @@ Step 3: Compilation & Building
 1. Compiling the Stub (Agent) with Static Linking & No Console
 
 If you installed cURL via WinGet and want to compile statically using MinGW, use the following command (adjust paths according to your Windows username and cURL version):
-g++ stub1.cpp resource.o -o stub.exe \ -I"C:/Users/YOUR_USERNAME/AppData/Local/Microsoft/WinGet/Packages/cURL.cURL_Microsoft.Winget.Source_8wekyb3d8bbwe/curl-YOUR_VERSION-win64-mingw/include" \ -L"C:/Users/YOUR_USERNAME/AppData/Local/Microsoft/WinGet/Packages/cURL.cURL_Microsoft.Winget.Source_8wekyb3d8bbwe/curl-YOUR_VERSION-win64-mingw/lib" \ -lcurl -lwininet -lgdi32 -lgdiplus -lole32 -static-libgcc -static-libstdc++ -lshfolder -mwindows
+g++ stub.cpp resource.o -o stub.exe -DCURL_STATICLIB -I"C:/Users/Hello/AppData/Local/Microsoft/WinGet/Packages/cURL.cURL_Microsoft.Winget.Source_8wekyb3d8bbwe/curl-8.21.0_4-win64-mingw/include" -L"C:/Users/Hello/AppData/Local/Microsoft/WinGet/Packages/cURL.cURL_Microsoft.Winget.Source_8wekyb3d8bbwe/curl-8.21.0_4-win64-mingw/lib" -static -static-libgcc -static-libstdc++ "-Wl,-Bstatic" -lstdc++ -lpthread "-Wl,-Bdynamic" -lcurl -lssl -lcrypto -lngtcp2_crypto_libressl -lngtcp2 -lnghttp3 -lnghttp2 -lssh2 -lpsl -lzstd -lbrotlidec -lbrotlicommon -lz -lws2_32 -lwldap32 -lcrypt32 -lsecur32 -lbcrypt -lnormaliz -lwininet -lgdi32 -lgdiplus -lole32 -lshfolder -liphlpapi
 
 Notes:
 
